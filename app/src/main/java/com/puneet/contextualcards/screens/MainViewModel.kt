@@ -2,7 +2,6 @@ package com.puneet.contextualcards.screens
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.puneet.contextualcards.model.DataResponse
 import com.puneet.contextualcards.network.Repository
 import com.puneet.contextualcards.utils.ScreenEvent
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -10,8 +9,6 @@ import kotlinx.coroutines.channels.Channel
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.receiveAsFlow
 import kotlinx.coroutines.launch
-import timber.log.Timber
-import java.lang.Error
 import javax.inject.Inject
 
 @HiltViewModel

@@ -2,7 +2,6 @@ package com.puneet.contextualcards.network
 
 import com.puneet.contextualcards.model.DataResponse
 import retrofit2.HttpException
-import timber.log.Timber
 import java.io.IOException
 import javax.inject.Inject
 
