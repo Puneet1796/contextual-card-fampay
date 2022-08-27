@@ -15,7 +15,7 @@ import javax.inject.Inject
 class MainViewModel @Inject constructor(
     private val repository: Repository
 ) : ViewModel() {
-    private val _events = Channel<ScreenEvent>(Channel.BUFFERED)
+    private val _events = Channel<ScreenEvent>()
     val events: Flow<ScreenEvent>
         get() = _events.receiveAsFlow()
 
