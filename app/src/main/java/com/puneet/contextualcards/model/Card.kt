@@ -1,5 +1,6 @@
 package com.puneet.contextualcards.model
 
+import androidx.recyclerview.widget.DiffUtil
 import com.google.gson.annotations.SerializedName
 
 data class Card(
@@ -14,4 +15,16 @@ data class Card(
     @SerializedName("bg_color") val bgColor: String?,
     @SerializedName("bg_gradient") val bgGradient: Gradient?,
     @SerializedName("cta") val cta: List<CallToAction>
-)
+) {
+    companion object {
+        val CALLBACK = object : DiffUtil.ItemCallback<Card>() {
+            override fun areItemsTheSame(oldItem: Card, newItem: Card): Boolean {
+                return oldItem == newItem
+            }
+
+            override fun areContentsTheSame(oldItem: Card, newItem: Card): Boolean {
+                return oldItem == newItem
+            }
+        }
+    }
+}

@@ -6,7 +6,7 @@ enum class ImageType {
     @SerializedName("asset")
     ASSET,
 
-    @SerializedName("external")
+    @SerializedName("ext")
     EXTERNAL
 }
 
